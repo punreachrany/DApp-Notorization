@@ -30,7 +30,7 @@
 .pub-cache/
 .pub/
 /build/
-/assets/abi/
+/assets/abi/abi.json
 /lib/blockchain_constant.dart
 
 # Web related
