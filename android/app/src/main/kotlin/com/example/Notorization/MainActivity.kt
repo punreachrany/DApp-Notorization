@@ -1,4 +1,4 @@
-package com.example.Notorization
+package com.punreachrany.Notorization
 
 import io.flutter.embedding.android.FlutterActivity
 

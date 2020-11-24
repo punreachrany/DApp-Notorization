@@ -1,3 +1,5 @@
+import 'package:Notorization/Notorization.dart';
+import 'package:Notorization/themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:Notorization/blockchain_constant.dart' as Blockchain;
 import 'package:flutter/services.dart';
@@ -13,6 +15,9 @@ class _MainPageState extends State<MainPage> {
   Client httpClient;
   Web3Client ethClient;
   bool data = false;
+
+  //
+  final _formKey = GlobalKey<FormState>();
 
   //
   final myAddress = Blockchain.metamask_address;
@@ -102,12 +107,50 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Container(
-        child: SingleChildScrollView(
-          physics: AlwaysScrollableScrollPhysics(),
-          child: Column(),
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: Container(
+          padding: EdgeInsets.all(20),
+          child: SingleChildScrollView(
+            physics: AlwaysScrollableScrollPhysics(),
+            child: Column(
+              children: [
+                Container(
+                  padding: EdgeInsets.only(
+                    top: 25.0,
+                  ),
+                  width: double.infinity,
+                  child: RaisedButton(
+                    //elevation: 5.0,
+                    elevation: 0.0,
+                    onPressed: () async {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Notorization(),
+                        ),
+                      );
+                    },
+                    padding: EdgeInsets.all(15.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    color: Colors.lightBlue[800],
+                    child: Text(
+                      "Notorization",
+                      style: TextStyle(
+                        color: Colors.white,
+                        letterSpacing: 1.5,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );

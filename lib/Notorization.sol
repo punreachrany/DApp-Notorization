@@ -1,54 +1,39 @@
 pragma solidity ^0.5.0;
 
-contract Notorization {
-    
-    string testing_word;
 
-    struct MyNotaryEntry {
-        string fileName;
-        uint timestamp;
-        bytes32 checkSum;
-        string comments;
-        bool isSet;
-        address setBy;
-    }
-    
-    constructor() public {
-        testing_word = "Not Cool";
-    }
+contract Notary {
 
-    mapping (bytes32 => MyNotaryEntry) public myMapping;
-
-    event NewEntry(bytes32 _checksum, string _filename, address indexed _setBy);
-
-    /**
-     * Example: 0x193C167E2B336B32356F17009C923C4CD33AC8E3F62BAD1384E8A049F77FD295, "test", "test"
-     * */
-    function addEntry(bytes32 _checksum, string memory _fileName, string memory _comments) public {
-        require(!myMapping[_checksum].isSet);
-
-        myMapping[_checksum].isSet = true;
-        myMapping[_checksum].fileName = _fileName;
-        myMapping[_checksum].timestamp = now;
-        myMapping[_checksum].comments = _comments;
-        myMapping[_checksum].setBy = msg.sender;
-
-        emit NewEntry(_checksum, _fileName, msg.sender);
-    }
-
-
-    function entrySet(bytes32 _checksum) public view returns(string memory, uint, string memory, address) {
-        require(myMapping[_checksum].isSet);
-        return (myMapping[_checksum].fileName, myMapping[_checksum].timestamp, myMapping[_checksum].comments, myMapping[_checksum].setBy);
-    }
-    
-    function returnTesting() public view returns(string memory){
-        return testing_word;
-    } 
-    
-    function setTesting(string memory words) public{
-        testing_word = words;
-    }
-
+  struct DocRecord{
+      string signature;
+      uint256 timestamp;
+      bool isValue;
+  }
+  
+  mapping(string => DocRecord) DocRecordMap;
+  
+  function getRecord(string memory _inputHash) public view returns(string memory, uint256, bool){
+      string memory _signature = DocRecordMap[_inputHash].signature;
+      uint256 _timestamp = DocRecordMap[_inputHash].timestamp;
+      bool _isValue = DocRecordMap[_inputHash].isValue;
+      
+      return (_signature, _timestamp, _isValue);
+  }
+  
+  function writeRecord(string memory _inputHash, string memory _signature) public {
+      require(DocRecordMap[_inputHash].timestamp == 0);
+      DocRecordMap[_inputHash].signature = _signature;
+      DocRecordMap[_inputHash].timestamp = now;
+      DocRecordMap[_inputHash].isValue = true;
+  }
+  
+  function checkExistence(string memory _inputHash) public view returns (bool){
+      if(DocRecordMap[_inputHash].isValue){
+          return true;
+      }else{
+          return false;
+      }
+  }
+  
+  
 
 }

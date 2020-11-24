@@ -1,105 +1,19 @@
 [
 	{
-		"constant": false,
-		"inputs": [
-			{
-				"internalType": "bytes32",
-				"name": "_checksum",
-				"type": "bytes32"
-			},
-			{
-				"internalType": "string",
-				"name": "_fileName",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_comments",
-				"type": "string"
-			}
-		],
-		"name": "addEntry",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "words",
-				"type": "string"
-			}
-		],
-		"name": "setTesting",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"internalType": "bytes32",
-				"name": "_checksum",
-				"type": "bytes32"
-			},
-			{
-				"indexed": false,
-				"internalType": "string",
-				"name": "_filename",
-				"type": "string"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "_setBy",
-				"type": "address"
-			}
-		],
-		"name": "NewEntry",
-		"type": "event"
-	},
-	{
 		"constant": true,
 		"inputs": [
 			{
-				"internalType": "bytes32",
-				"name": "_checksum",
-				"type": "bytes32"
+				"internalType": "string",
+				"name": "_inputHash",
+				"type": "string"
 			}
 		],
-		"name": "entrySet",
+		"name": "checkExistence",
 		"outputs": [
 			{
-				"internalType": "string",
+				"internalType": "bool",
 				"name": "",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			},
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
+				"type": "bool"
 			}
 		],
 		"payable": false,
@@ -110,42 +24,27 @@
 		"constant": true,
 		"inputs": [
 			{
-				"internalType": "bytes32",
-				"name": "",
-				"type": "bytes32"
+				"internalType": "string",
+				"name": "_inputHash",
+				"type": "string"
 			}
 		],
-		"name": "myMapping",
+		"name": "getRecord",
 		"outputs": [
 			{
 				"internalType": "string",
-				"name": "fileName",
+				"name": "",
 				"type": "string"
 			},
 			{
 				"internalType": "uint256",
-				"name": "timestamp",
+				"name": "",
 				"type": "uint256"
-			},
-			{
-				"internalType": "bytes32",
-				"name": "checkSum",
-				"type": "bytes32"
-			},
-			{
-				"internalType": "string",
-				"name": "comments",
-				"type": "string"
 			},
 			{
 				"internalType": "bool",
-				"name": "isSet",
+				"name": "",
 				"type": "bool"
-			},
-			{
-				"internalType": "address",
-				"name": "setBy",
-				"type": "address"
 			}
 		],
 		"payable": false,
@@ -153,18 +52,23 @@
 		"type": "function"
 	},
 	{
-		"constant": true,
-		"inputs": [],
-		"name": "returnTesting",
-		"outputs": [
+		"constant": false,
+		"inputs": [
 			{
 				"internalType": "string",
-				"name": "",
+				"name": "_inputHash",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_signature",
 				"type": "string"
 			}
 		],
+		"name": "writeRecord",
+		"outputs": [],
 		"payable": false,
-		"stateMutability": "view",
+		"stateMutability": "nonpayable",
 		"type": "function"
 	}
 ]

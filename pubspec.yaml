@@ -23,8 +23,21 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  # For web connection with solidity
   web3dart: ^1.2.3
   http: ^0.12.2
+
+  # For sha256
+  crypto: ^2.1.5
+
+  # Firebase
+  firebase_core: ^0.5.2
+  firebase_auth: ^0.18.3
+  cloud_firestore: ^0.14.3
+  firebase_database: ^4.3.0
+  firebase_storage: ^5.0.1
+  firebase_analytics: ^6.2.0
 
 
   # The following adds the Cupertino Icons font to your application.
