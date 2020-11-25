@@ -1,4 +1,4 @@
-import 'package:Notorization/Notorization.dart';
+import 'package:Notorization/screens/notarization/Notorization.dart';
 import 'package:Notorization/themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:Notorization/blockchain_constant.dart' as Blockchain;
