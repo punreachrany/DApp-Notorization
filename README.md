@@ -37,3 +37,11 @@ Information Systems
 cngjsskaisme@hanyang.ac.kr
 
 Demo Link: https://youtu.be/Qyco3k7DF7U
+
+
+File Notarized
+<img width="1792" alt="Screen Shot 2021-01-17 at 3 17 07 PM" src="https://user-images.githubusercontent.com/54469196/104832859-bbfc0200-58d7-11eb-915a-868f2e1581e2.png">
+
+Duplicated file Rejected
+<img width="1792" alt="Screen Shot 2021-01-17 at 3 17 13 PM" src="https://user-images.githubusercontent.com/54469196/104832860-c0c0b600-58d7-11eb-8e44-665b5e683381.png">
+
