@@ -1,7 +1,10 @@
-# NotaChain -  Next Gen Notarization Service
+## NotaChain -  Next Gen Notarization Service
 
 NotaChain is **Next Gen Notarization Service** that will enable people to easily notarize stuffs that keep in the safe manner.  We believe it will be a better service than traditional services in terms of convenience, cost, speed and even amount of coverage as well. So we think the characteristics of the blockchain is suitable for this field of business.
 
+# Tools and Technology
+- Flutter
+- Metamask, Infura & Remix Ethereum
 
 # Why Notachain?
 - Faster
