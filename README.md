@@ -26,12 +26,14 @@ Our apps are served in android.
 [Click Here](https://hyu-my.sharepoint.com/:x:/g/personal/cngjsskaisme_hanyang_ac_kr/EYbWzMMyssBHm6LRPPMrifMBQFcjqAx43ANUXelPwhN8Lw?e=F1CZLc)
 
 # Our Team
+Rany Punreach
+Hanyang University
+Information Systems
+punreachmaths@gmail.com
+
 Chu Heon Nam
 Hanyang University
 Information Systems
 cngjsskaisme@hanyang.ac.kr
 
-Rany Punreach
-Hanyang University
-Information Systems
-punreachmaths@gmail.com
+Demo Link: https://youtu.be/Qyco3k7DF7U
